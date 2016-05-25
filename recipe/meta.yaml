@@ -1,16 +1,19 @@
-{% set version = "1.2.0" %}
+{% set name = "thredds_crawler" %}
+{% set version = "1.4.0" %}
+{% set md5 = "74984e6e77314fd6b466c5e6f853c9fe" %}
+{% set build = 0 %}
 
 package:
-    name: thredds_crawler
+    name: {{ name }}
     version: {{ version }}
 
 source:
-    fn: thredds_crawler-{{ version }}.tar.gz
-    url: https://pypi.python.org/packages/source/t/thredds_crawler/thredds_crawler-{{ version }}.tar.gz
-    md5: 36e610681ed4023d26d24d3a55c03a6b
+    fn: {{ name }}-{{ version }}.tar.gz
+    url: https://pypi.python.org/packages/ef/72/cd479deb55378e96ce3a354e7815e66fa630ead3dd1daa272b7dea0f736f/thredds_crawler-1.4.0.tar.gz
+    md5: {{ md5 }}
 
 build:
-    number: 0
+    number: {{ build }}
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
