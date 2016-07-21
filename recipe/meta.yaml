@@ -1,6 +1,6 @@
 {% set name = "thredds_crawler" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "ad0c429e05c9b010382f66d28516ce83e024fee489691f9ddb1696998fcf462e" %}
+{% set version = "1.5.0" %}
+{% set md5 = "26e51efc904b3c6e05ff611e601715af" %}
 {% set build = 0 %}
 
 package:
@@ -9,8 +9,8 @@ package:
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/asascience-open/thredds_crawler/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+    url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    md5: {{ md5 }}
 
 build:
     number: {{ build }}
