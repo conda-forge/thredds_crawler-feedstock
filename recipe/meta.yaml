@@ -33,7 +33,7 @@ test:
 
 about:
     home: https://github.com/asascience-open/thredds_crawler
-    license: GPL-3.0
+    license: MIT
     summary: 'A Python library for crawling THREDDS servers.'
 
 extra:

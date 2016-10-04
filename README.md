@@ -3,7 +3,7 @@ About thredds_crawler
 
 Home: https://github.com/asascience-open/thredds_crawler
 
-Package license: GPL-3.0
+Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
