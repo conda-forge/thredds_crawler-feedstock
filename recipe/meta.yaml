@@ -35,6 +35,8 @@ about:
     home: https://github.com/asascience-open/thredds_crawler
     license: MIT
     summary: 'A Python library for crawling THREDDS servers.'
+    license_file: LICENSE
+    license_family: MIT
 
 extra:
     recipe-maintainers:
