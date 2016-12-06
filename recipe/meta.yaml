@@ -1,42 +1,42 @@
 {% set name = "thredds_crawler" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "ecb2b1858ee5775a58dfc0517b1ebab6266324544a8f6e70dc6731084dd1da56" %}
+{% set version = "1.5.3" %}
+{% set sha256 = "b31f9991c4373bfd4e7ee3e8fb320400d709d03e12740d094406316f5cdd3d8f" %}
 {% set build = 0 %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/ioos/thredds_crawler/archive/{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/ioos/thredds_crawler/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: {{ build }}
-    script: python setup.py install --single-version-externally-managed --record record.txt
+  number: {{ build }}
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
-        - requests
-        - lxml
-        - netcdf4
-        - pytz
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - requests
+    - lxml
+    - netcdf4
+    - pytz
 
 test:
-    imports:
-        - thredds_crawler
+  imports:
+    - thredds_crawler
 
 about:
-    home: https://github.com/asascience-open/thredds_crawler
-    license: MIT
-    summary: 'A Python library for crawling THREDDS servers.'
+  home: https://github.com/asascience-open/thredds_crawler
+  license: MIT
+  summary: 'A Python library for crawling THREDDS servers.'
 
 extra:
-    recipe-maintainers:
-        - kwilcox
-        - ocefpaf
+  recipe-maintainers:
+    - kwilcox
+    - ocefpaf
