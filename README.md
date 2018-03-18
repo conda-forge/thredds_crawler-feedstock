@@ -1,7 +1,7 @@
 About thredds_crawler
 =====================
 
-Home: https://github.com/asascience-open/thredds_crawler
+Home: https://github.com/ioos/thredds_crawler
 
 Package license: MIT
 
@@ -14,9 +14,7 @@ Summary: A Python library for crawling THREDDS servers.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/thredds_crawler-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/thredds_crawler-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/thredds_crawler-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/thredds_crawler-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/thredds_crawler-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/thredds-crawler-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/thredds_crawler-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/thredds_crawler-feedstock)
 
 Current release info
 ====================
