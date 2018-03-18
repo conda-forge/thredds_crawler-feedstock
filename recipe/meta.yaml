@@ -1,25 +1,22 @@
-{% set name = "thredds_crawler" %}
 {% set version = "1.5.4" %}
-{% set sha256 = "508426b6931c790ae6124453c1ef862f533fe867a122ea6ade85bcc44b78ff85" %}
-{% set build = 0 %}
 
 package:
-  name: {{ name }}
+  name: thredds_crawler
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/ioos/thredds_crawler/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 508426b6931c790ae6124453c1ef862f533fe867a122ea6ade85bcc44b78ff85
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - requests
@@ -32,7 +29,7 @@ test:
     - thredds_crawler
 
 about:
-  home: https://github.com/asascience-open/thredds_crawler
+  home: https://github.com/ioos/thredds_crawler
   license: MIT
   summary: 'A Python library for crawling THREDDS servers.'
 
