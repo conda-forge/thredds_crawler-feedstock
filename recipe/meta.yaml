@@ -9,28 +9,31 @@ source:
   sha256: 508426b6931c790ae6124453c1ef862f533fe867a122ea6ade85bcc44b78ff85
 
 build:
-  number: 1
+  number: 2
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
     - pip
   run:
-    - python
+    - python >={{ python_min }}
     - requests
     - lxml
     - netcdf4
     - pytz
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - thredds_crawler
 
 about:
   home: https://github.com/ioos/thredds_crawler
   license: MIT
+  license_file: LICENSE
   summary: 'A Python library for crawling THREDDS servers.'
 
 extra:
